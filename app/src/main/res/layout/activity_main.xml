@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtTitle"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemesanan Hotel"/>
+
+        <TextView
+            android:id="@+id/txtId"
+            android:text="Id Transaksi"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitle"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="15sp"
+            android:layout_toRightOf="@id/txtId"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtNama"
+            android:text="Nama Tamu"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editId"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginRight="15sp"
+            android:layout_toRightOf="@id/txtNama"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtTanggal"
+            android:text="Tanggal Check In"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editTanggal"
+            android:layout_toRightOf="@id/txtTanggal"
+            android:layout_below="@id/editnama"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="15sp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtKamar"
+            android:text="Jenis kamar"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinKamar"
+            android:entries="@array/kamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTanggal"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/txtKamar" />
+
+        <TextView
+            android:id="@+id/txtMenginap"
+            android:text="Lama Menginap"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtKamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editMenginap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinKamar"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="15sp"
+            android:layout_toRightOf="@id/txtMenginap"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtSewa"
+            android:text="Harga Sewa/Hari"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtMenginap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editSewa"
+            android:layout_toRightOf="@id/txtSewa"
+            android:layout_below="@id/editMenginap"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="15sp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtKelamin"
+            android:text="Jenis Kelamin"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtSewa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/RGKelamin"
+            android:layout_toRightOf="@id/txtKelamin"
+            android:layout_marginLeft="30sp"
+            android:orientation="horizontal"
+            android:layout_below="@id/editSewa"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/LK"
+                android:text="Laki - Laki"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/Perempuan"
+                android:text="Perempuan"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtTamu"
+            android:text="Jumlah Tamu"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtKelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinTamu"
+            android:entries="@array/jumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RGKelamin"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/txtKamar" />
+
+        <TextView
+            android:id="@+id/txtTambahan"
+            android:text="Tambahan"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/txtTamu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/restoran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinTamu"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/txtTambahan"
+            android:text="Restoran" />
+
+        <EditText
+            android:id="@+id/editRestoran"
+            android:layout_toRightOf="@id/restoran"
+            android:layout_below="@id/spinTamu"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="15sp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/laundry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/restoran"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/txtTambahan"
+            android:text="Laundry" />
+
+        <EditText
+            android:id="@+id/editLaundry"
+            android:layout_toRightOf="@id/laundry"
+            android:layout_below="@id/editRestoran"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="15sp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/extra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/laundry"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/txtTambahan"
+            android:text="Extra Bad"/>
+
+        <EditText
+            android:id="@+id/editExtra"
+            android:layout_toRightOf="@id/extra"
+            android:layout_below="@id/editLaundry"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="15sp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtPembayaran"
+            android:text="Pembayaran"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_below="@id/extra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinPembayaran"
+            android:entries="@array/pembayaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/extra"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/txtKamar" />
+
+        <Button
+            android:id="@+id/btnProses"
+            android:text="PROSES"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtPembayaran"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtOutput"
+            android:text="Detail Transaksi :"
+            android:layout_below="@id/btnProses"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</ScrollView>
